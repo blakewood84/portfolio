@@ -4,13 +4,27 @@ export default function Navbar() {
       <div
         className="container"
         style={{
-          border: "1px solid red",
           width: "760px",
           maxWidth: "100%",
           margin: "0 auto",
         }}
       >
-        <h1>Hi</h1>
+        <div className="flex-1">
+          <a className="btn btn-ghost normal-case text-xl">blakeCodes</a>
+        </div>
+        <ul className="menu menu-horizontal px-2">
+          <li>
+            <a>About</a>
+          </li>
+          <li>
+            <a>Blog</a>
+          </li>
+        </ul>
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img src="https://placeimg.com/80/80/people" />
+          </div>
+        </label>
       </div>
     </div>
   );
