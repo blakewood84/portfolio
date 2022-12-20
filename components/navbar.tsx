@@ -1,41 +1,16 @@
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-200">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Blake Wood</a>
-      </div>
-      <div className="flex-none gap-2">
-        <div className="form-control">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-bordered"
-          />
-        </div>
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="https://placeimg.com/80/80/people" />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-300 rounded-box w-52"
-          >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
-        </div>
+    <div className="navbar bg-base-200 fixed top-0 flex justify-center w-full">
+      <div
+        className="container"
+        style={{
+          border: "1px solid red",
+          width: "760px",
+          maxWidth: "100%",
+          margin: "0 auto",
+        }}
+      >
+        <h1>Hi</h1>
       </div>
     </div>
   );
