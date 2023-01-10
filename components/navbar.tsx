@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <div className="navbar bg-base-200 fixed top-0 flex justify-center w-full">
@@ -14,10 +16,10 @@ export default function Navbar() {
         </div>
         <ul className="menu menu-horizontal px-2">
           <li>
-            <a>About</a>
+            <Link href="/about">About</Link>
           </li>
           <li>
-            <a>Blog</a>
+            <Link href="/blog">Blog</Link>
           </li>
         </ul>
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
