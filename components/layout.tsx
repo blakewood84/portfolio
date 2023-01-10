@@ -9,8 +9,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      {children}
+      <div className="h-screen border2 border-rose-500">
+        <Navbar />
+        <div className="h-full pt-16">{children}</div>
+      </div>
     </div>
   );
 }
