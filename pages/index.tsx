@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import Navbar from "../components/navbar";
 import { getBlogPosts } from "../lib/blog";
 
 export default function Home() {
