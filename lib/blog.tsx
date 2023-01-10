@@ -16,13 +16,30 @@ const blogDirectory = path.join(process.cwd(), "blog");
 //   - Article 1
 //   - Article 2
 
-export function getBlogPosts() {
-  console.log("Blog Directory: ", blogDirectory);
-  // get directories under the blog directory
-  const fileNames = fs.readdirSync(blogDirectory);
+export function getBlogPosts(): any {
+  const posts = [];
 
-  // Will give an array of directories
+  // Each folder under the blog folder is a category
+  const files: string[] = fs.readdirSync(blogDirectory);
 
-  const files = fs.readdirSync(blogDirectory + `/${fileNames[0]}`);
-  console.log("Files in flutter directory: ", files);
+  for (const file of files) {
+    const id = file.replace(/\.md$/, "");
+
+    // Read markdown file as string
+    const filePath = path.join(blogDirectory, file);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+
+    // Use gray-matter to pare the post metadata section
+    const { content, data } = matter(fileContents);
+
+    const contents = {
+      id,
+      data,
+      content,
+    };
+
+    posts.push(contents);
+  }
+
+  return posts;
 }

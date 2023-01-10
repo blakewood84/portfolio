@@ -1,5 +1,3 @@
-import { getBlogPosts } from "../lib/blog";
-
 export default function Home() {
   return (
     <main className="h-full flex items-center justify-center w-full flex-col">
@@ -29,13 +27,4 @@ export default function Home() {
       </div>
     </main>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getBlogPosts();
-  return {
-    props: {
-      posts: [],
-    },
-  };
 }

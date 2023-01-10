@@ -1,5 +1,6 @@
 ---
 title: "A Post About Type Casting in Typescript"
+tag: "TypeScript"
 date: "2020-01-01"
 ---
 
